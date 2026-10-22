@@ -43,9 +43,10 @@ Repository: <https://github.com/ndwlbj/astrbot_plugin_freemodel_sync>
    - Manually: clone the repository into AstrBot's `data/plugins/` directory
      and restart AstrBot.
 
-   AstrBot installs `requirements.txt` (`freemodel-sync>=0.2.0`) into its own
-   environment. The `groq_api_key` setting needs freemodel-sync 0.3.0 or newer
-   (`pip install -U "freemodel-sync>=0.3.0"` in AstrBot's environment).
+   AstrBot installs `requirements.txt` (`freemodel-sync>=0.3.0`) into its own
+   environment. 0.3.0 is required for the Groq provider (`groq_api_key`) and for
+   multi-provider ranking; if an older freemodel-sync is already installed there,
+   upgrade it with `pip install -U "freemodel-sync>=0.3.0"`.
 2. Create a freemodel-sync config and test it once from a shell, as described
    in the freemodel-sync README (`freemodel-sync init`, then `sync --dry-run`).
 3. In the plugin settings set **freemodel-sync config file** to that path

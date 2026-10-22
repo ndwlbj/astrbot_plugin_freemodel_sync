@@ -13,7 +13,7 @@
     "default": ""
   },
   "groq_api_key": {
-    "description": "Groq API key (optional, freemodel-sync >= 0.3)",
+    "description": "Groq API key (optional)",
     "type": "string",
     "hint": "Passed only to the subprocess as GROQ_API_KEY. Only used when the groq provider is enabled in the freemodel-sync config. Never shown in chat.",
     "secret": true,

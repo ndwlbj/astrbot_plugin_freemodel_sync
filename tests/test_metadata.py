@@ -35,7 +35,7 @@ def test_conf_schema_valid():
 
 def test_requirements_pin():
     lines = [line.strip() for line in (ROOT / "requirements.txt").read_text().splitlines() if line.strip()]
-    assert lines == ["freemodel-sync>=0.2.0"]
+    assert lines == ["freemodel-sync>=0.3.0"]
 
 
 def test_main_uses_only_documented_astrbot_api():
