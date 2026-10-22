@@ -26,8 +26,16 @@
 
 ## 安装
 
-1. 在 AstrBot 中安装本插件（WebUI → 插件 → 从本地文件夹/压缩包安装，或把本目录复制到 `data/plugins/`）。
+仓库地址：<https://github.com/ndwlbj/astrbot_plugin_freemodel_sync>
+
+1. 在 AstrBot 中安装本插件，以下任选一种：
+   - **从链接安装**（推荐）：在 WebUI 打开 **插件**，点击右下角的 **安装插件（+）**，选择 **从链接安装**，
+     填入 `https://github.com/ndwlbj/astrbot_plugin_freemodel_sync`。
+   - **从文件安装**：把仓库下载为 `.zip`，选择 **从文件安装** 上传。
+   - 手动安装：把仓库克隆到 AstrBot 的 `data/plugins/` 目录，然后重启 AstrBot。
+
    AstrBot 会把 `requirements.txt`（`freemodel-sync>=0.2.0`）装进它自己的环境。
+   `groq_api_key` 设置需要 freemodel-sync 0.3.0 及以上版本（在 AstrBot 的环境中执行 `pip install -U "freemodel-sync>=0.3.0"`）。
 2. 按 freemodel-sync 的 README 创建配置，并先在命令行里试一次（`freemodel-sync init`，然后 `sync --dry-run`）。
 3. 在插件设置里把 **freemodel-sync config file** 设为该路径（留空则使用 freemodel-sync 的默认值：
    `$FREEMODEL_SYNC_CONFIG` 或 `~/.config/freemodel-sync/config.yml`）。

@@ -31,9 +31,21 @@ refused before anything runs.
 
 ## Install
 
-1. Install the plugin into AstrBot (WebUI → Plugins → install from a local
-   folder/zip, or copy this directory to `data/plugins/`). AstrBot installs
-   `requirements.txt` (`freemodel-sync>=0.2.0`) into its own environment.
+Repository: <https://github.com/ndwlbj/astrbot_plugin_freemodel_sync>
+
+1. Install the plugin into AstrBot. Any of these works:
+   - **Install from URL** (recommended): in the WebUI open **Plugins**, click
+     the **Install (+)** button in the lower-right corner, choose
+     **Install from URL** and enter
+     `https://github.com/ndwlbj/astrbot_plugin_freemodel_sync`.
+   - **Install from file**: download the repository as a `.zip` and choose
+     **Install from File**.
+   - Manually: clone the repository into AstrBot's `data/plugins/` directory
+     and restart AstrBot.
+
+   AstrBot installs `requirements.txt` (`freemodel-sync>=0.2.0`) into its own
+   environment. The `groq_api_key` setting needs freemodel-sync 0.3.0 or newer
+   (`pip install -U "freemodel-sync>=0.3.0"` in AstrBot's environment).
 2. Create a freemodel-sync config and test it once from a shell, as described
    in the freemodel-sync README (`freemodel-sync init`, then `sync --dry-run`).
 3. In the plugin settings set **freemodel-sync config file** to that path

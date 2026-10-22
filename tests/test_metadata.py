@@ -1,5 +1,6 @@
 import ast
 import json
+import re
 from pathlib import Path
 
 import yaml
@@ -14,6 +15,11 @@ def test_metadata_required_fields():
         assert isinstance(meta.get(field), str) and meta[field]
     assert meta["name"] == "astrbot_plugin_freemodel_sync"
     assert not meta["astrbot_version"].startswith("v")
+    # plugin-publish docs: semantic version without a leading "v", repo URL required
+    assert re.fullmatch(r"\d+\.\d+\.\d+", meta["version"])
+    assert meta["repo"] == "https://github.com/ndwlbj/astrbot_plugin_freemodel_sync"
+    assert meta["social_link"].startswith("https://")
+    assert isinstance(meta["tags"], list) and all(isinstance(t, str) and t for t in meta["tags"])
 
 
 def test_conf_schema_valid():

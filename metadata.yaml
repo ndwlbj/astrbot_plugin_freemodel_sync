@@ -2,6 +2,14 @@ name: astrbot_plugin_freemodel_sync
 display_name: FreeModel Sync
 desc: Admin commands to list free LLMs, sync them into your tool configs with freemodel-sync, and run it on a schedule.
 short_desc: Free-model discovery and sync via freemodel-sync.
-version: v0.1.0
+version: 0.1.0
 author: ndwlbj
+repo: https://github.com/ndwlbj/astrbot_plugin_freemodel_sync
 astrbot_version: ">=4.10,<5"
+social_link: https://github.com/ndwlbj
+tags:
+  - llm
+  - free-models
+  - openrouter
+  - groq
+  - admin
