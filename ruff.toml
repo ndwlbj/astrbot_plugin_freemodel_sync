@@ -1,0 +1,6 @@
+# Lint/format settings for development only; AstrBot ignores this file.
+target-version = "py310"
+line-length = 110
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B"]

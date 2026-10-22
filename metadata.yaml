@@ -1,0 +1,7 @@
+name: astrbot_plugin_freemodel_sync
+display_name: FreeModel Sync
+desc: Admin commands to list free LLMs, sync them into your tool configs with freemodel-sync, and run it on a schedule.
+short_desc: Free-model discovery and sync via freemodel-sync.
+version: v0.1.0
+author: ndwlbj
+astrbot_version: ">=4.10,<5"

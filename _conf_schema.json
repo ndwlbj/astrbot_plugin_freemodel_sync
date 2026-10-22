@@ -1,0 +1,59 @@
+{
+  "fms_config_path": {
+    "description": "freemodel-sync config file",
+    "type": "string",
+    "hint": "Path to the freemodel-sync YAML config (targets, filters, providers). Empty = freemodel-sync's default ($FREEMODEL_SYNC_CONFIG or ~/.config/freemodel-sync/config.yml).",
+    "default": ""
+  },
+  "openrouter_api_key": {
+    "description": "OpenRouter API key (optional)",
+    "type": "string",
+    "hint": "Passed only to the freemodel-sync subprocess as OPENROUTER_API_KEY. Leave empty to use the environment. Never shown in chat.",
+    "secret": true,
+    "default": ""
+  },
+  "groq_api_key": {
+    "description": "Groq API key (optional, freemodel-sync >= 0.3)",
+    "type": "string",
+    "hint": "Passed only to the subprocess as GROQ_API_KEY. Only used when the groq provider is enabled in the freemodel-sync config. Never shown in chat.",
+    "secret": true,
+    "default": ""
+  },
+  "auto_sync_enabled": {
+    "description": "Scheduled auto-sync",
+    "type": "bool",
+    "hint": "Run `freemodel-sync sync` on a timer. Can also be toggled with /fms auto on|off.",
+    "default": false
+  },
+  "auto_sync_interval_minutes": {
+    "description": "Auto-sync interval (minutes)",
+    "type": "int",
+    "hint": "Minimum 30. Every sync spends a few free requests on probes.",
+    "slider": {"min": 30, "max": 1440, "step": 30},
+    "default": 360
+  },
+  "auto_sync_notify": {
+    "description": "Report auto-sync results to chat",
+    "type": "bool",
+    "hint": "Send a short, redacted result to the chat where /fms auto on was last run.",
+    "default": true
+  },
+  "notify_session": {
+    "description": "Auto-sync report session",
+    "type": "string",
+    "hint": "Set automatically by /fms auto on.",
+    "invisible": true,
+    "default": ""
+  },
+  "list_limit": {
+    "description": "Max models shown by /fms list and /fms rank",
+    "type": "int",
+    "slider": {"min": 1, "max": 50, "step": 1},
+    "default": 15
+  },
+  "timeout_seconds": {
+    "description": "freemodel-sync timeout (seconds)",
+    "type": "int",
+    "default": 600
+  }
+}
